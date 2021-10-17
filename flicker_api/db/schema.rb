@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_17_193954) do
+ActiveRecord::Schema.define(version: 2021_10_17_200017) do
 
   create_table "flicks", force: :cascade do |t|
     t.string "title"
@@ -21,4 +21,14 @@ ActiveRecord::Schema.define(version: 2021_10_17_193954) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "reviews", force: :cascade do |t|
+    t.string "content"
+    t.string "author"
+    t.integer "flick_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["flick_id"], name: "index_reviews_on_flick_id"
+  end
+
+  add_foreign_key "reviews", "flicks"
 end
