@@ -3,8 +3,12 @@ class ReviewsController < ApplicationController
 
   # GET /reviews
   def index
-    @reviews = Review.all
-
+    if params[:flick_id] && Flick.find_by_id(params[:flick_id])
+      @flick = Flick.find_by_id(params[:flick_id])
+      @reviews = @flick.reviews
+    else
+      @reviews = Review.all
+    end
     render json: @reviews
   end
 
@@ -15,7 +19,7 @@ class ReviewsController < ApplicationController
 
   # POST /reviews
   def create
-    @review = Review.new(review_params)
+    @review = Review.create(review_params)
 
     if @review.save
       render json: @review, status: :created, location: @review
@@ -36,6 +40,7 @@ class ReviewsController < ApplicationController
   # DELETE /reviews/1
   def destroy
     @review.destroy
+    render json: {id: params[:id], msg: "Deleted"}
   end
 
   private
@@ -46,6 +51,6 @@ class ReviewsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def review_params
-      params.require(:review).permit(:content, :author, :flicks_id)
+      params.require(:review).permit(:content, :author, :flick_id)
     end
 end

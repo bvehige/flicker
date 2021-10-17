@@ -15,7 +15,7 @@ class FlicksController < ApplicationController
 
   # POST /flicks
   def create
-    @flick = Flick.new(flick_params)
+    @flick = Flick.create(flick_params)
 
     if @flick.save
       render json: @flick, status: :created, location: @flick
