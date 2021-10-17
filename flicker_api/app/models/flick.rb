@@ -1,0 +1,2 @@
+class Flick < ApplicationRecord
+end
