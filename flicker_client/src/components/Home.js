@@ -7,6 +7,9 @@ class Home extends Component {
             <div>
             <h1>Welcome to Flicker!</h1>
             <h2>Movie and TV reviews</h2>
+            <div>
+                
+            </div>
             </div>
         )
     }
