@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import SearchContainer from './SearchContainer'
+import SearchContainer from '../components/Search/SearchContainer'
 import { loadSearch } from '../actions/searchActions'
 import { addFlick } from '../actions/flicksActions'
 
