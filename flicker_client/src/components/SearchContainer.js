@@ -7,7 +7,7 @@ class SearchContainer extends Component {
         return (
             <div>
                 <h2>Search for a Flick to review</h2>
-                <SearchForm />
+                <SearchForm search={this.props.search} />
             </div>
         )
     }
