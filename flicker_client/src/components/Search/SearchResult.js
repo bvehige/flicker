@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Redirect } from 'react-router'
 
 class SearchResult extends Component {
 
@@ -7,6 +8,7 @@ class SearchResult extends Component {
         this.setState({
             searchResults: ''
         })
+        window.location ='/flicks'
     }
 
     render() {
