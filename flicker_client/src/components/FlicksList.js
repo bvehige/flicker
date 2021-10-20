@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
 
 const FlicksList = ({ flicks }) => {
 
@@ -7,12 +8,12 @@ const FlicksList = ({ flicks }) => {
 
     return (
         <div className="flick_cards">
-            Flicks to review...
+            <h2>Select a Flick to read reviews or write a new review.</h2>
             {sorted_flicks.map(flick =>
             <ul>
                 <div className="flick_card" key={flick.id}>
-                    <img src={flick.image} alt="Movie Poster"></img>
-
+                    <Link key={flick.id} to={`/flicks/${flick.id}`}>             
+                    <img src={flick.image} alt="Movie Poster"></img></Link>
                 </div>
             </ul>)
             }

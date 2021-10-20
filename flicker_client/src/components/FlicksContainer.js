@@ -8,7 +8,7 @@ const FlicksContainer = ({match, flicks}) => {
 
     return(
     <div>
-        <h2>Select a Flick to read reviews or write a new review.</h2>
+        
         <FlicksList />
     </div>
     )

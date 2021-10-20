@@ -9,7 +9,7 @@ const Router = () => {
         <Switch>
             <Route exact path='/' component={Home} />
             <Route path='/about' component={About} />
-            <Route path='/flicks' component={FlicksContainer} />
+            <Route exact path='/flicks' render={(routerProps) => <FlicksContainer {...routerProps}/>} />
 
         </Switch>
     )
