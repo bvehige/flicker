@@ -3,6 +3,7 @@ import { Route } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { fetchFlicks } from '../actions/flicksActions'
 import FlicksList from './FlicksList'
+import Flick from './Flick'
 
 const FlicksContainer = ({match, flicks}) => {
 
@@ -10,6 +11,7 @@ const FlicksContainer = ({match, flicks}) => {
     <div>
         
         <FlicksList />
+        <Route exact path={`${match.url}/:flickId`} render={(routerProps) => <Flick {...routerProps} flicks={flicks} />} />
     </div>
     )
 }
