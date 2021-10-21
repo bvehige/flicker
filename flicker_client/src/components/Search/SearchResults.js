@@ -16,7 +16,7 @@ class SearchResults extends Component {
             />)
 
             return (
-                <div className="search">
+                <div className="search">     
                     {results}
                 </div>
             )

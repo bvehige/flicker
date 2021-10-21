@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { flicksReducer } from '../../reducers/flicksReducer'
 
 
 class SearchResult extends Component {
@@ -15,10 +16,13 @@ class SearchResult extends Component {
         const { title, year, category, image } = this.props
     
         return (
+            
             <div className='search_card'>
-                {title} | {year} | {category}
+                {title} | {year} | {category} 
+                <br/>
+                <button className='card' onClick={this.handleOnClick}>Add {title} for review</button>
+                <br/>
                 <img src={image} alt='Movie Poster'/>
-                <button className='card' onClick={this.handleOnClick}>Add Flick for review</button>
             </div>
         )
     }
