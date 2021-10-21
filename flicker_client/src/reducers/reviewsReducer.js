@@ -5,7 +5,7 @@ export const reviewsReducer = (state = [], action) => {
         case "ADD_REVIEW":
             return [...state, action.payload]
         case "DELETE_REVIEW":
-            return state.filter(review => review.id !== action.payload.id)
+            return state.filter(review => review.id !== +action.payload.id)
         default:
             return state
     }

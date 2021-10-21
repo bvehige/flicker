@@ -1,9 +1,9 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { fetchReviews } from '../actions/reviewsActions'
-import { deleteReview } from '../actions/reviewsActions'
+import { fetchReviews, deleteReview } from '../actions/reviewsActions'
 import { useDispatch } from 'react-redux'
 import { useEffect } from 'react'
+import DeleteReview from './DeleteReview'
 
 const ReviewsList = ({ reviews, flickId}) => {
 
@@ -23,6 +23,7 @@ const ReviewsList = ({ reviews, flickId}) => {
                             <p>{r.content}</p>
                             <small>Reviewed By: {r.author} | Submitted On {r.created_at}</small>
                             <br/>
+                            <DeleteReview reviewId={r.id} />
                         </div>
                     </ul>)}
 
@@ -36,4 +37,4 @@ const mapStateToProps = state => {
 
 }
 
-export default connect(mapStateToProps, { fetchReviews })(ReviewsList)
+export default connect(mapStateToProps, { fetchReviews, deleteReview })(ReviewsList)

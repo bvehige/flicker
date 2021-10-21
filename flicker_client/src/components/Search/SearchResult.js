@@ -1,6 +1,4 @@
 import React, { Component } from 'react'
-import { flicksReducer } from '../../reducers/flicksReducer'
-
 
 class SearchResult extends Component {
 
