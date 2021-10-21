@@ -1,5 +1,6 @@
 class Flick < ApplicationRecord
     has_many :reviews
     
-    validates :image, uniqueness: true
+    validates :image, uniqueness: true 
 end
+

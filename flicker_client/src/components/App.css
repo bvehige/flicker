@@ -1,0 +1,146 @@
+.header {
+    text-align: center;
+}
+
+.reviews_list {
+    display: flex;
+}
+
+.reviews {
+    object-fit: contain;
+    width: 100%;
+    max-height: 250px;
+    margin-right: 10px;
+    transition: transform 450ms;
+    
+}
+
+.review_card {
+    /* margin-left: 2px; */
+    /* object-fit: contain; */
+    /* max-width: 550px; */
+    /* margin-right: 5px; */
+    /* max-height: 200px; */
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    /* object-fit: contain;
+    width: 100%;
+    max-height: 250px;
+    margin-right: 10px;
+    transition: transform 450ms; */
+
+}
+
+.search {
+    display: flex;
+    margin-right: 10px;
+    max-height: 200px;
+ 
+}
+
+.search_card {
+    width: 100%;
+    object-fit: contain;
+    /* max-height: 200px; */
+    margin-right: 20px;
+    transition: transform 450ms;
+     
+}
+
+.search_card:hover {
+    transform: scale(1.1);
+}
+
+.search_card button{
+    display: none;
+    position: absolute;
+    top: 115px;
+    left: 70px;
+    width: 170px;
+    height: 50px;
+    background: rgb(126, 185, 240);
+    border-radius: 5px;
+    box-shadow: 0 0 10px 2px #000;
+    border: 2px solid #fff;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.search_card:hover button{
+    display: block
+}
+
+
+
+.flick_cards {
+    display: flex;
+    /* overflow-y: scroll; */
+    /* overflow-x: scroll;    */
+    /* padding: 10px  */
+}
+
+/* .flick_cards::-webkit-scrollbar {
+    display: none
+} */
+
+.flick_card {
+    object-fit: contain;
+    width: 100%;
+    max-height: 150px;
+    margin-right: 10px;
+    transition: transform 450ms;
+}
+
+.flick_card:hover {
+    transform: scale(1.1);
+    /* filter: grayscale(100%) */
+}
+
+.flick_card span {
+    display: none;
+    /* position: absolute; */
+    text-align: center;
+    /* top: 10px; */
+    /* left: 70px; */
+    /* width: 170px;
+    height: 50px; */
+    /* background: rgb(126, 185, 240);
+    border-radius: 5px;
+    box-shadow: 0 0 10px 2px #000;
+    border: 2px solid #fff; */
+    font-size: 30px;
+    color: rgb(132, 220, 247)
+}
+
+.flick_card:hover span{
+    display: block;
+}
+
+.flick_show {
+    text-align: center;
+
+}
+
+.flick_form {
+    text-align: center;
+    border-style: solid;
+    border-color: rgb(224, 219, 219);
+}
+
+body {
+    background-color: rgb(58, 56, 56); 
+    color: cornsilk;
+    
+}
+
+.header button {
+    background: rgb(161, 161, 161);
+}
+
+a {
+color:rgb(159, 241, 224)
+ }
+a:hover {
+    background: rgb(220, 67, 20);
+}

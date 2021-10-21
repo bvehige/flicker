@@ -15,10 +15,10 @@ class SearchResult extends Component {
     
         return (
             
-            <div className='search_card'>
+            <div className='search_card' onClick={this.handleOnClick}>
                 {title} | {year} | {category} 
                 <br/>
-                <button className='card' onClick={this.handleOnClick}>Add {title} for review</button>
+                {/* <button className='card' onClick={this.handleOnClick}>Add {title} for review</button> */}
                 <br/>
                 <img src={image} alt='Movie Poster'/>
             </div>

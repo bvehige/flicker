@@ -11,16 +11,17 @@ class Home extends Component {
             <div>
             <h1>Welcome to Flicker - Movie and TV Reviews</h1>
                 <div>
+                    <FlicksForm />
+                </div>
+                <h2>OR </h2>
+                <div>
                 <SearchContainer 
                 search={this.props.search}
                 searchResults={this.props.searchResults}
                 addFlick={this.props.addFlick}
                 />
                 </div>
-                OR
-                <div>
-                <FlicksForm />
-                </div>
+                
             </div>
         )
     }

@@ -8,7 +8,7 @@ const FlicksList = ({ flicks }) => {
 
     return (
         <div className="flick_cards">
-            <h2>Select a Flick to read reviews or write a new review.</h2>
+            
             {sorted_flicks.map(flick =>
             <ul>
                 <div className="flick_card" key={flick.id}>
