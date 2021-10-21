@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import SearchContainer from '../components/Search/SearchContainer'
 import { loadSearch } from '../actions/searchActions'
 import { addFlick } from '../actions/flicksActions'
+import FlicksForm from './FlicksForm'
 
 class Home extends Component {
     render(){
@@ -15,6 +16,10 @@ class Home extends Component {
                 searchResults={this.props.searchResults}
                 addFlick={this.props.addFlick}
                 />
+                </div>
+                OR
+                <div>
+                <FlicksForm />
                 </div>
             </div>
         )

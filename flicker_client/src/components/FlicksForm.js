@@ -11,11 +11,30 @@ class FlicksForm extends Component {
         image: ''
     }
 
+    handleChange = e => {
+        const { name, value } = e.target
+        this.setState({
+            [name]: value
+        })
+    }
+
+    handleSubmit = e => {
+        e.preventDefault()
+        this.props.addFlick(this.state)
+        this.setState({
+            title: '',
+            year: '',
+            category: '',
+            image: ''
+        })
+        window.location ='/flicks'
+    }
+
     render() {
         return(
             <div className="flick_form">
                 <form onSubmit={this.handleSubmit}>
-                    <h2>Didn't find your flick in the search? Add a new Flick for review via form</h2>
+                    <h2>Add a new Flick for review via form</h2>
                     <label>Flick Title:</label>
                     <input type="text" value={this.state.title} onChange={this.handleChange} name="title"></input>
                     <span>  </span>

@@ -4,6 +4,7 @@ import SearchResult from './SearchResult'
 class SearchResults extends Component {
 
     render(){
+        if(this.props.searchResults !== null){
         const results = this.props.searchResults.map(result => 
             <SearchResult key={result.Id}
             id={result.Id}
@@ -20,7 +21,7 @@ class SearchResults extends Component {
                 </div>
             )
     }
-
+}      
 }
 
 export default SearchResults

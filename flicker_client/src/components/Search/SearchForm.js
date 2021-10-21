@@ -30,20 +30,23 @@ class SearchForm extends Component {
     }    
 
     mapResults = (results) => {
+        if(results.Search){
         let flickresults = results.Search
-        console.log(flickresults[0])
-        let SearchResults = []
-            for (let i = 0; i < flickresults.length; i++){
-                let details = flickresults[i]
-                SearchResults.push({
-                    Id: i,
-                    title: details.Title,
-                    year: details.Year,
-                    category: details.Type,
-                    image: details.Poster
-                })
+        console.log(flickresults)
+            let SearchResults = []
+                for (let i = 0; i < flickresults.length; i++){
+                    let details = flickresults[i]
+                    SearchResults.push({
+                        Id: i,
+                        title: details.Title,
+                        year: details.Year,
+                        category: details.Type,
+                        image: details.Poster
+                    })
             }
             this.props.search(SearchResults)
+        } else  alert("Sorry, no results found")
+        
     }
 
     render() {
@@ -56,7 +59,7 @@ class SearchForm extends Component {
                     placeholder='Search for a flick to review'
                     name='search'
                     onChange={this.handleOnChange}></input><br/><br/>
-                    <input type='submit' value='Submit'></input>
+                    <input type='submit' value='Submit Search'></input>
 
                 </form>
             </div>
