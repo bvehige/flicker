@@ -131,6 +131,9 @@
 body {
     background-color: rgb(58, 56, 56); 
     color: cornsilk;
+    background-image: url("https://images.pond5.com/cinema-projector-light-beam-rays-footage-155461580_iconl.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
     
 }
 

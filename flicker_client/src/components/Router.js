@@ -4,11 +4,13 @@ import Home from '../components/Home'
 import About from '../components/About'
 import FlicksContainer from './FlicksContainer'
 import Flick from './Flick'
+import Search from './Search'
 const Router = () => {
     return (
         <Switch>
             <Route exact path='/' component={Home} />
             <Route path='/about' component={About} />
+            <Route path='/search' component={Search} />
             <Route exact path='/flicks' render={(routerProps) => <FlicksContainer {...routerProps}/>} />
             <Route path='/flicks/:id' render={(routerProps) => <Flick {...routerProps} /> } />
         </Switch>
