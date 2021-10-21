@@ -1,0 +1,39 @@
+import React from 'react'
+import { connect } from 'react-redux'
+import { fetchReviews } from '../actions/reviewsActions'
+import { deleteReview } from '../actions/reviewsActions'
+import { useDispatch } from 'react-redux'
+import { useEffect } from 'react'
+
+const ReviewsList = ({ reviews, flickId}) => {
+
+    const dispatch = useDispatch()
+
+    useEffect(() => {
+        dispatch(fetchReviews())
+    }, [dispatch])
+
+        return(
+            <div className="reviews">
+                {reviews.filter(function(review){
+                    return review.flick_id === flickId
+                }).map(r => 
+                    <ul>
+                        <div className="review_card" key={r.id}>
+                            <p>{r.content}</p>
+                            <small>Reviewed By: {r.author} | Submitted On {r.created_at}</small>
+                            <br/>
+                        </div>
+                    </ul>)}
+
+            </div>
+        )
+    
+}
+
+const mapStateToProps = state => {
+    return { reviews: state.reviews }
+
+}
+
+export default connect(mapStateToProps, { fetchReviews })(ReviewsList)
