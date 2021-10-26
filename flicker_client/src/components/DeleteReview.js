@@ -11,7 +11,7 @@ class DeleteReview extends Component {
         this.state = {
             id: this.props.reviewId
         }
-        this.handleDeleteReview = this.handleDeleteReview.bind(this)
+        // this.handleDeleteReview = this.handleDeleteReview.bind(this)
 
     }
 

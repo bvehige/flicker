@@ -5,12 +5,15 @@ import About from '../components/About'
 import FlicksContainer from './FlicksContainer'
 import Flick from './Flick'
 import Search from './Search'
+import Reviews from './Reviews'
+
 const Router = () => {
     return (
         <Switch>
             <Route exact path='/' component={Home} />
             <Route path='/about' component={About} />
             <Route path='/search' component={Search} />
+            <Route path='/reviews' component={Reviews} />
             <Route exact path='/flicks' render={(routerProps) => <FlicksContainer {...routerProps}/>} />
             <Route path='/flicks/:id' render={(routerProps) => <Flick {...routerProps} /> } />
         </Switch>
