@@ -6,6 +6,7 @@ import FlicksContainer from './FlicksContainer'
 import Flick from './Flick'
 import Search from './Search'
 import Reviews from './Reviews'
+// import { flicksReducer } from '../reducers/flicksReducer'
 
 const Router = () => {
     return (
