@@ -1,11 +1,11 @@
 import React from 'react'
-import { Route } from 'react-router-dom'
-import { connect } from 'react-redux'
-import { fetchFlicks } from '../actions/flicksActions'
+// import { Route } from 'react-router-dom'
+// import { connect } from 'react-redux'
+// import { fetchFlicks } from '../actions/flicksActions'
 import FlicksList from './FlicksList'
-import Flick from './Flick'
+// import Flick from './Flick'
 
-const FlicksContainer = ({match, flicks}) => {
+const FlicksContainer = () => {
 
     return(
     <div>
@@ -16,4 +16,4 @@ const FlicksContainer = ({match, flicks}) => {
     )
 }
 
-export default connect(null, { fetchFlicks })(FlicksContainer)
+export default (FlicksContainer)

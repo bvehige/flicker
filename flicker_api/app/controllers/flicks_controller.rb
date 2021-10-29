@@ -42,6 +42,7 @@ class FlicksController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_flick
       @flick = Flick.find(params[:id])
+      redirect_to flicks_path if !@flick
     end
 
     # Only allow a trusted parameter "white list" through.

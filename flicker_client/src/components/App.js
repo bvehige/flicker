@@ -14,7 +14,7 @@ class App extends Component {
         return (
             <div className="header">
                 <button className="button-header"><h4><Link to="/">Home</Link></h4></button>
-                <button className="button-header"><h4><Link to="/search">Search for a flick to review</Link></h4></button>
+                <button className="button-header"><h4><Link to="/search">Search for a Flick to review</Link></h4></button>
                 <button className="button-header"><h4><Link to="/flicks">Reviewed Flicks</Link></h4></button>
                 <button className="button-header"><h4><Link to="/about">About</Link></h4></button>
             <Router />
