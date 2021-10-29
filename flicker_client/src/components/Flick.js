@@ -3,33 +3,31 @@ import { connect } from 'react-redux'
 import ReviewsList from './ReviewsList'
 import ReviewForm from './ReviewForm'
 import { useEffect } from 'react'
-import { useState } from 'react'
+import { useDispatch } from 'react-redux'
+import { fetchFlick } from '../actions/flickAction'
 
 
-const Flick = ({ match, flicks }) => {
+const Flick = ({ match, flick }) => {
+
+    const dispatch = useDispatch()
+
     const id = parseInt(match.params.id)
-    const flick = flicks.find(flick => flick.id === id)
 
-    // const [flick, setFlick] = useState({
-    // })
-
-    // useEffect(() => {
-    //     fetch(`http://127.0.0.1:3000/flicks/${id}`)
-    //     .then (resp => resp.json())
-    //     .then(flick => setFlick(flick))
-    // }, [])
-
+    useEffect(() => {
+        dispatch(fetchFlick(`${id}`));
+    }, [dispatch])
+    
 
 return (
     <div className="flick_show">
         <div className="flick_title">
-            <h2> {flick.title} | {flick.year} | {flick.category} | {flick.id}</h2>
+            <h2> {flick.title} | {flick.year} | {flick.category} | </h2>
             <img src={flick.image} alt="Movie Poster"/>
             <br/>
         </div>
         <br/>
         <div className="review_form">
-        <ReviewForm flickId={flick.id}/>
+        <ReviewForm flickId={id}/>
         </div>
         <div className="review_list">
             <h4>Reviews of {flick.title}:</h4>
@@ -42,7 +40,8 @@ return (
 const mapStateToProps = (state) => {
     return{
         flicks: state.flicks,
-        reviews: state.reviews
+        reviews: state.reviews,
+        flick: state.flick
     }
 }
 
