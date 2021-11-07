@@ -39,7 +39,7 @@ class ReviewForm extends Component {
                     <label>Reviewer's name: </label>
                     <input placeholder="Your name" type="text" value={this.state.author} onChange={this.handleChange} name="author" />
                     <br /><br />
-                    <input type="submit" value="Submit Review" />
+                    <input className="review_submit" type="submit" value="Submit Review" />
 
                 </form>
             </div>

@@ -28,7 +28,7 @@ class DeleteReview extends Component {
     render() {
         return (
             <div>
-                <button onClick={this.handleDeleteReview}>Delete Review</button>
+                <button className="delete_review" onClick={this.handleDeleteReview}>Delete Review</button>
             </div>
         )
     }   

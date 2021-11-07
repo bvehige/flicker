@@ -5,7 +5,7 @@ import ReviewForm from './ReviewForm'
 import { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import { fetchFlick } from '../actions/flickAction'
-
+import Likes from './Likes'
 
 const Flick = ({ match, flick }) => {
 
@@ -21,8 +21,10 @@ const Flick = ({ match, flick }) => {
 return (
     <div className="flick_show">
         <div className="flick_title">
-            <h2> {flick.title} | {flick.year} | {flick.category} | </h2>
+            <h2> {flick.title} | {flick.year} | {flick.category} </h2>
             <img src={flick.image} alt="Movie Poster"/>
+            <br/>
+            <Likes />
             <br/>
         </div>
         <br/>

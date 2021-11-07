@@ -15,6 +15,14 @@
     
 }
 
+.review_submit {
+    cursor: pointer;
+}
+
+.delete_review {
+    cursor: pointer;
+}
+
 .review_card {
     /* margin-left: 2px; */
     /* object-fit: contain; */
@@ -71,7 +79,9 @@
     display: block
 }
 
-
+.like_button{
+    cursor: pointer;
+}
 
 .flick_cards {
     display: flex;
@@ -129,7 +139,7 @@
 }
 
 body {
-    background-color: rgb(58, 56, 56); 
+    background-color: black;
     color: cornsilk;
     background-image: url("https://images.pond5.com/cinema-projector-light-beam-rays-footage-155461580_iconl.jpeg");
     background-repeat: no-repeat;
