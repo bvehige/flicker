@@ -8,12 +8,8 @@ import FlicksForm from './FlicksForm'
 class Search extends Component {
     render(){
         return (
-            <div>
+            <div className="search_page">
             <h1>Welcome to Flicker - Movie and TV Reviews</h1>
-                <div>
-                    <FlicksForm />
-                </div>
-                <h2>OR </h2>
                 <div>
                 <SearchContainer 
                 search={this.props.search}

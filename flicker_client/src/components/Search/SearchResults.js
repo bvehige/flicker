@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import FlicksForm from '../FlicksForm'
 import SearchResult from './SearchResult'
 
 class SearchResults extends Component {
@@ -16,8 +17,11 @@ class SearchResults extends Component {
             />)
 
             return (
-                <div className="search">     
+                <div>
+                    <div className="search">     
                     {results}
+                    </div>
+                    <br/>
                 </div>
             )
     }

@@ -16,6 +16,7 @@ class App extends Component {
                 <button className="button-header"><h4><Link to="/">Home</Link></h4></button>
                 <button className="button-header"><h4><Link to="/search">Search for a Flick to review</Link></h4></button>
                 <button className="button-header"><h4><Link to="/flicks">Reviewed Flicks</Link></h4></button>
+                <button className="button-header"><h4><Link to="/flickform">Add a Flick via Form</Link></h4></button>
                 <button className="button-header"><h4><Link to="/about">About</Link></h4></button>
             <Router />
             </div>

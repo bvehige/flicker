@@ -33,6 +33,7 @@ class FlicksForm extends Component {
     render() {
         return(
             <div className="flick_form">
+                <br/>
                 <form onSubmit={this.handleSubmit}>
                     <h2>Add a new Flick for review via form</h2>
                     <label>Flick Title:</label>
