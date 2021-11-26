@@ -4,6 +4,7 @@ import { fetchReviews, deleteReview } from '../actions/reviewsActions'
 import { useDispatch } from 'react-redux'
 import { useEffect } from 'react'
 import DeleteReview from './DeleteReview'
+import Comments from './Comments'
 import moment from 'moment'
 
 const ReviewsList = ({ reviews, flickId}) => {
@@ -25,6 +26,12 @@ const ReviewsList = ({ reviews, flickId}) => {
                             <small>Reviewed By: {r.author} | Submitted {moment(r.created_at).fromNow()}</small>
                             <br/>
                             <DeleteReview reviewId={r.id} />
+                            <br/>
+
+                            <div className="comments">
+                            <u>Comments</u>
+                            <Comments reviewId={r.id} />
+                            </div>
                         </div>
                     </ul>)}
 
