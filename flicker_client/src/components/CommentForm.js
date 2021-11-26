@@ -32,8 +32,9 @@ class CommentForm extends Component {
             <div className="comment_form">
                 <form onSubmit={this.handleSubmit}>
                     <label>Add a Comment:</label><br/>
-                    <input placeholder="Your name" type="text" value={this.state.author} onChange={this.handleChange} name="author" />
-                    <textarea placeholder="Share your thoughts" type="text" value={this.state.content} onChange={this.handleChange} name="content"></textarea>
+                    <input placeholder="Your name" type="text" value={this.state.author} onChange={this.handleChange} name="author" /><br/>
+                    <textarea rows="2" cols="40" placeholder="Share your thoughts" type="text" value={this.state.content} onChange={this.handleChange} name="content"></textarea>
+                    <br/> 
                     <input type="submit" value="Submit Comment"></input>
                 </form>
             </div>

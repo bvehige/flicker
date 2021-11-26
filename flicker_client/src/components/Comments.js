@@ -18,7 +18,7 @@ const Comments = ({ comments, reviewId }) => {
                 return comment.review_id === reviewId
             }).map(c =>
                 <li><div key={c.id}>
-                    {c.author} says,  {c.content}</div></li>
+                    {c.author} says - {c.content}</div></li>
             )}
         </div>
     )
