@@ -6,6 +6,7 @@ import { useEffect } from 'react'
 import DeleteReview from './DeleteReview'
 import Comments from './Comments'
 import moment from 'moment'
+import CommentForm from './CommentForm'
 
 const ReviewsList = ({ reviews, flickId}) => {
 
@@ -29,6 +30,7 @@ const ReviewsList = ({ reviews, flickId}) => {
                             <br/>
 
                             <div className="comments">
+                            <CommentForm reviewId={r.id} />
                             <u>Comments</u>
                             <Comments reviewId={r.id} />
                             </div>

@@ -8,3 +8,14 @@ export const fetchComments = () => {
     }
 }
 
+export const addComment = (comment, reviewId) => {
+    return (dispatch) => {
+        fetch("http://127.0.0.1:3000/comments", {
+            method: "POST",
+            body: JSON.stringify({comment, review_id: reviewId}),
+            headers: { 'Content-Type' : 'application/json'}})
+            .then(resp => resp.json())
+            .then(comment => dispatch({ type: 'ADD_COMMENT', payload: comment}))
+        }
+    }
+
