@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   resources :comments
-  resources :reviews
+  resources :reviews do
+    resources :comments
+  end
   resources :flicks do 
     resources :reviews
   end
